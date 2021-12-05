@@ -1,0 +1,5 @@
+.toolbarCustom {
+    background: var(--app-primary-color-dark);
+    text-align: center;
+    color: var(--app-primary-color-light);
+}

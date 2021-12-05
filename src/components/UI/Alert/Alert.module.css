@@ -1,0 +1,9 @@
+.alertChip{
+    font-weight: bold;
+    line-height: normal;
+    padding: 1.5rem;
+}
+
+.alertLabel{
+    text-align: center;
+}

@@ -1,1 +1,37 @@
-ECHO is on.
+.copyrights {
+    margin-top: 40%;
+    font-family: 'Roboto Light';
+    font-size: small;
+    justify-content: center;
+    color: var(--app-grey-2);
+}
+
+.bgContent {
+    background-image     : url( '../../assets/img/logo-black.jpg');
+    background-size      : 100%;
+    background-position  : top left;
+    background-repeat    : no-repeat;
+    height               : 50%;
+    text-align           : center;
+}
+
+.loginControls {
+    margin-top: 15%;
+}
+
+
+.loginTitle {
+    margin-top: 10%;
+    font-family: 'Roboto Bold';
+    font-size: 24px;
+    --color: var(--app-primary-color);
+    justify-content: center;
+}
+
+.loginSubTitle {
+    font-family: 'Roboto Light';
+    --color: var(--app-primary-color);
+    font-size: 20px;
+    justify-content: center;
+    
+}
