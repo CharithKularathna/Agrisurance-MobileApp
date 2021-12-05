@@ -5,7 +5,7 @@ import styles from './Login.module.css';
 
 const Login: React.FC = () => {
   return (
-    <IonPage>
+    <IonPage style={{background:"#222428"}}>
       <Toolbar>Login to your Account</Toolbar>
       <IonContent className="ion-text-center" fullscreen>
         <IonHeader collapse="condense">
