@@ -1,0 +1,11 @@
+/* THEME BASED CUSTOM CSS VARIABLES ARE DECLARED HERE */
+:root {
+    --app-primary-color-dark: #386641;
+    --app-primary-color: #6A994E ;
+    --app-primary-color-light: #A7C957;
+    --app-danger: #BC4749;
+    --app-yellow-shade: #F2E8CF;
+    --app-grey-1: #fefefe;
+    --app-grey-2: #9a9898;
+    --app-primary-black: #010101;
+}
