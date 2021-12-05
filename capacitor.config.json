@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "agrisurance",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

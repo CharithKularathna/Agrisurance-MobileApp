@@ -1,0 +1,7 @@
+{
+  "name": "agrisurance",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
