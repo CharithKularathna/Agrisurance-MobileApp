@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 import { personOutline, lockClosedOutline } from 'ionicons/icons';
 
-import styles from './LoginControls.module.css'
+import styles from './RegisterControls.module.css'
 
 const RegisterControls: React.FC = () => {
     return (
@@ -12,10 +12,34 @@ const RegisterControls: React.FC = () => {
                 <IonCol size="11">
                     <IonItem className="" lines="none">
                         <IonIcon className="" icon={personOutline} slot="start" />
-                        <IonInput className="" type="text" placeholder="Username" required/>
+                        <IonInput className="" type="text" placeholder="Name" required/>
                     </IonItem>
                 </IonCol>
                 
+            </IonRow>
+            <IonRow className="ion-justify-content-center">
+                <IonCol size="11">
+                    <IonItem className="" lines="none">
+                        <IonIcon className="" icon={lockClosedOutline} slot="start" />
+                        <IonInput className=""  type="text" placeholder="Password" required/>
+                    </IonItem>
+                </IonCol>
+            </IonRow>
+            <IonRow className="ion-justify-content-center">
+                <IonCol size="11">
+                    <IonItem className="" lines="none">
+                        <IonIcon className="" icon={lockClosedOutline} slot="start" />
+                        <IonInput className=""  type="text" placeholder="Password" required/>
+                    </IonItem>
+                </IonCol>
+            </IonRow>
+            <IonRow className="ion-justify-content-center">
+                <IonCol size="11">
+                    <IonItem className="" lines="none">
+                        <IonIcon className="" icon={lockClosedOutline} slot="start" />
+                        <IonInput className=""  type="password" placeholder="Password" required/>
+                    </IonItem>
+                </IonCol>
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="11">
