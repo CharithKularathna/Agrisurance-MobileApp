@@ -23,11 +23,15 @@
 .loginTitle {
     margin-top: 10%;
     font-family: 'Roboto Bold';
-    font-variant: small-caps;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bolder;
-    color: var(--app-primary-color);
+    font-variant: normal;
+    color: var(--app-primary-color-dark);
     justify-content: center;
+    border: 2px;
+    border-style: solid;
+    border-radius: 2%;
+    background-color: azure;
 }
 
 .loginSubTitle {

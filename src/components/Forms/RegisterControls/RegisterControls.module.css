@@ -1,12 +1,16 @@
 .registerInputContainer{
     --background: var(--app-primary-color-dark);
     color: var(--app-yellow-shade);
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .field{
+    --background: var(--app-primary-color-dark);
     border-radius: 20px;
-    margin-bottom: 5%;
 }
 
+.divider {
+    --background: var(--app-light-brown);
+    color: var(--app-yellow-shade);
+}
 

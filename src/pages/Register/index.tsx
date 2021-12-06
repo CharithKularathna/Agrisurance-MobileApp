@@ -20,7 +20,7 @@ const Register: React.FC = () => {
         <IonGrid>
             <IonRow>
                 <IonCol className={styles.registerTitle}>
-                  
+                  Fill in the following and Register!
                 </IonCol>     
             </IonRow>
         </IonGrid>

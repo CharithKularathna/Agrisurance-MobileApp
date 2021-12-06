@@ -1,23 +1,26 @@
 .registerControls {
-    margin-top: 18%;
+    margin-top: 0%;
 }
 
 
 .registerTitle {
     margin-top: 10%;
     font-family: 'Roboto Bold';
-    font-variant: small-caps;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bolder;
     color: var(--app-primary-color);
     justify-content: center;
+    border: 2px;
+    border-style: solid;
+    border-radius: 2%;
+    background-color: azure;
 }
 
 .registerSubTitle {
     font-family: 'Roboto Light';
     font-variant: small-caps;
     color: var(--app-primary-color);
-    font-size: 20px;
+    font-size: 18px;
     justify-content: center;
     
 }
@@ -28,6 +31,6 @@
 
 .registerBtn {
     --background: var(--app-light-brown);
-    margin-top: 24%;
+    margin-top: 5%;
     color: var(--app-yellow-shade);
 }

@@ -26,12 +26,12 @@ const Home: React.FC = () => {
           </IonRow>
           <IonRow>
             <IonCol>
-                <IonButton fill="solid" color="warning" className={styles.button}>LOGIN</IonButton>
+                <IonButton routerLink="/login" fill="solid" color="warning" className={styles.button}>LOGIN</IonButton>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-                <IonButton fill="outline" color="warning" className={styles.button}>SIGN UP</IonButton>
+                <IonButton routerLink="/register" fill="outline" color="warning" className={styles.button}>SIGN UP</IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>
