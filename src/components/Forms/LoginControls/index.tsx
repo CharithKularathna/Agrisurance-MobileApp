@@ -10,18 +10,18 @@ const LoginControls: React.FC = () => {
         <IonGrid className="">
             <IonRow className="ion-justify-content-center">
                 <IonCol size="11">
-                    <IonItem className="" lines="none">
+                    <IonItem className={styles.loginInputContainer} lines="none">
                         <IonIcon className="" icon={personOutline} slot="start" />
-                        <IonInput className="" type="text" placeholder="Username" required/>
+                        <IonInput className={styles.field} type="text" placeholder="Username" required/>
                     </IonItem>
                 </IonCol>
                 
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="11">
-                    <IonItem className="" lines="none">
+                    <IonItem className={styles.loginInputContainer} lines="none">
                         <IonIcon className="" icon={lockClosedOutline} slot="start" />
-                        <IonInput className=""  type="password" placeholder="Password" required/>
+                        <IonInput className={styles.field} type="password" placeholder="Password" required/>
                     </IonItem>
                 </IonCol>
             </IonRow>

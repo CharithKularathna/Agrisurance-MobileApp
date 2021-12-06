@@ -1,5 +1,5 @@
 .copyrights {
-    margin-top: 40%;
+    margin-top: 60%;
     font-family: 'Roboto Light';
     font-size: small;
     justify-content: center;
@@ -7,7 +7,7 @@
 }
 
 .bgContent {
-    background-image     : url( '../../assets/img/logo-black.jpg');
+    background-image     : url( '../../assets/img/logo-yellow.jpg');
     background-size      : 100%;
     background-position  : top left;
     background-repeat    : no-repeat;
@@ -16,22 +16,35 @@
 }
 
 .loginControls {
-    margin-top: 17%;
+    margin-top: 18%;
 }
 
 
 .loginTitle {
     margin-top: 10%;
     font-family: 'Roboto Bold';
+    font-variant: small-caps;
     font-size: 24px;
-    --color: var(--app-primary-color);
+    font-weight: bolder;
+    color: var(--app-primary-color);
     justify-content: center;
 }
 
 .loginSubTitle {
     font-family: 'Roboto Light';
-    --color: var(--app-primary-color);
+    font-variant: small-caps;
+    color: var(--app-primary-color);
     font-size: 20px;
     justify-content: center;
     
+}
+
+.page {
+    --background: var(--app-yellow-shade);
+}
+
+.loginBtn {
+    --background: var(--app-light-brown);
+    margin-top: 24%;
+    color: var(--app-yellow-shade);
 }

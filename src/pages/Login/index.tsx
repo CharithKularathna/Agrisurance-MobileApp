@@ -1,13 +1,16 @@
-import { IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
+import { IonCol, IonContent, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar, IonButton } from '@ionic/react';
 import LoginControls from '../../components/Forms/LoginControls';
 import Toolbar from '../../components/Nav/Toolbar';
 import styles from './Login.module.css';
 
 const Login: React.FC = () => {
+   const pageStyles = "ion-text-center " + styles.page
+   const buttonStyles = "" + styles.loginBtn
+
   return (
-    <IonPage style={{background:"#222428"}}>
-      <Toolbar>Login to your Account</Toolbar>
-      <IonContent className="ion-text-center" fullscreen>
+    <IonPage>
+      <Toolbar></Toolbar>
+      <IonContent className={pageStyles} fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Login to your Account</IonTitle>
@@ -34,6 +37,7 @@ const Login: React.FC = () => {
                     <LoginControls />
                 </IonCol>
             </IonRow>
+            <IonButton size="default" className={buttonStyles}>LogIn</IonButton>
         </IonGrid>
         
         <IonGrid>
