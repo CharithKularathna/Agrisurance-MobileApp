@@ -1,4 +1,4 @@
-.loginInputContainer{
+.registerInputContainer{
     --background: var(--app-primary-color-dark);
     color: var(--app-yellow-shade);
     border-radius: 20px;
@@ -6,5 +6,7 @@
 
 .field{
     border-radius: 20px;
+    margin-bottom: 5%;
 }
+
 

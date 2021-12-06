@@ -1,0 +1,29 @@
+.page {
+    --background: var(--app-primary-color);
+    text-align: center;
+}
+
+.logo {
+    width: 50%;
+    height: 40%;
+    margin: auto;
+}
+
+.button {
+    width: 70%;
+    color: var(--app-yellow-shade);
+    font-weight: bold;
+}
+
+.caption {
+    margin-bottom: 10%;
+    font-weight: bolder;
+}
+
+.copyrights {
+    margin-top: 60%;
+    font-family: 'Roboto Light';
+    font-size: small;
+    justify-content: center;
+    color: var(--app-grey-2);
+}

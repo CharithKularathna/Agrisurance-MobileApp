@@ -10,7 +10,7 @@ const RegisterControls: React.FC = () => {
         <IonGrid className="">
             <IonRow className="ion-justify-content-center">
                 <IonCol size="11">
-                    <IonItem className="" lines="none">
+                    <IonItem className={styles.registerInputContainer} lines="none">
                         <IonIcon className="" icon={personOutline} slot="start" />
                         <IonInput className="" type="text" placeholder="Name" required/>
                     </IonItem>
@@ -19,7 +19,7 @@ const RegisterControls: React.FC = () => {
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="11">
-                    <IonItem className="" lines="none">
+                    <IonItem className={styles.registerInputContainer} lines="none">
                         <IonIcon className="" icon={lockClosedOutline} slot="start" />
                         <IonInput className=""  type="text" placeholder="Password" required/>
                     </IonItem>
@@ -27,7 +27,7 @@ const RegisterControls: React.FC = () => {
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="11">
-                    <IonItem className="" lines="none">
+                    <IonItem className={styles.registerInputContainer} lines="none">
                         <IonIcon className="" icon={lockClosedOutline} slot="start" />
                         <IonInput className=""  type="text" placeholder="Password" required/>
                     </IonItem>
@@ -35,7 +35,7 @@ const RegisterControls: React.FC = () => {
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="11">
-                    <IonItem className="" lines="none">
+                    <IonItem className={styles.registerInputContainer} lines="none">
                         <IonIcon className="" icon={lockClosedOutline} slot="start" />
                         <IonInput className=""  type="password" placeholder="Password" required/>
                     </IonItem>
@@ -43,7 +43,7 @@ const RegisterControls: React.FC = () => {
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="11">
-                    <IonItem className="" lines="none">
+                    <IonItem className={styles.registerInputContainer} lines="none">
                         <IonIcon className="" icon={lockClosedOutline} slot="start" />
                         <IonInput className=""  type="password" placeholder="Password" required/>
                     </IonItem>

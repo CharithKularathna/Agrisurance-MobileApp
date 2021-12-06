@@ -1,6 +1,7 @@
 .toolbarCustom {
     --background: var(--app-primary-color-dark);
-    text-align: center;
+    text-align: left;
+    font-family: "Roboto Bold";
     color: var(--app-primary-color-light);
     font-weight: bolder;
 }

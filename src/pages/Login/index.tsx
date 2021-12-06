@@ -19,13 +19,13 @@ const Login: React.FC = () => {
         <IonGrid>
             <IonRow>
                 <IonCol className={styles.loginTitle}>
-                    Welcome to Agrisurance
+                  Login to your Account
                 </IonCol>
                 
             </IonRow>
             <IonRow>
                 <IonCol className={styles.loginSubTitle}>
-                    Login to your Account to Proceed
+                    
                 </IonCol>
                 
             </IonRow>
@@ -42,7 +42,7 @@ const Login: React.FC = () => {
         
         <IonGrid>
             <IonRow className={styles.copyrights}>
-              Copyrights © Team MZJ {new Date().getFullYear()}
+              Copyrights © Team MZJ - {new Date().getFullYear()}
             </IonRow>
         </IonGrid>
       </IonContent>

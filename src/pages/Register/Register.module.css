@@ -1,1 +1,33 @@
-ECHO is on.
+.registerControls {
+    margin-top: 18%;
+}
+
+
+.registerTitle {
+    margin-top: 10%;
+    font-family: 'Roboto Bold';
+    font-variant: small-caps;
+    font-size: 24px;
+    font-weight: bolder;
+    color: var(--app-primary-color);
+    justify-content: center;
+}
+
+.registerSubTitle {
+    font-family: 'Roboto Light';
+    font-variant: small-caps;
+    color: var(--app-primary-color);
+    font-size: 20px;
+    justify-content: center;
+    
+}
+
+.page {
+    --background: var(--app-yellow-shade);
+}
+
+.registerBtn {
+    --background: var(--app-light-brown);
+    margin-top: 24%;
+    color: var(--app-yellow-shade);
+}
