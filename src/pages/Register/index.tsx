@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol, IonButton, IonText } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol, IonButton, IonText, IonItemDivider } from '@ionic/react';
 import RegisterControls from '../../components/Forms/RegisterControls';
 import Toolbar from '../../components/Nav/Toolbar';
 import styles from './Register.module.css';

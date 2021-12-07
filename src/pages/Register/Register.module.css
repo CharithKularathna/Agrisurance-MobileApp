@@ -5,7 +5,9 @@
 .registerTitleContainer {
     margin-top: 5%;
     margin-left: 5%;
-    text-align: left;
+    margin-right: 5%;
+    text-align: center;
+    border-bottom: 1px solid grey !important;
 }
 
 .registerTitle {
