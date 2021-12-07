@@ -11,14 +11,14 @@ const RegisterControls: React.FC = () => {
             <IonRow className="ion-justify-content-center">
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">First Name</IonLabel>
+                        <IonLabel position="stacked" color="customs">First Name</IonLabel>
                         <IonInput className={styles.field} type="text" placeholder="First Name" required={true}/>
                     </IonItem>
                 </IonCol>
                 
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">Last Name</IonLabel>
+                        <IonLabel position="stacked" color="customs">Last Name</IonLabel>
                         <IonInput className={styles.field} type="text" placeholder="Last Name" required={true}/>
                     </IonItem>
                 </IonCol>
@@ -27,7 +27,7 @@ const RegisterControls: React.FC = () => {
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">NIC Number</IonLabel>
+                        <IonLabel position="stacked" color="customs">NIC Number</IonLabel>
                         <IonInput className={styles.field} type="text" placeholder="NIC Number" required={true}/>
                     </IonItem>
                 </IonCol>
@@ -35,7 +35,7 @@ const RegisterControls: React.FC = () => {
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">Mobile Number</IonLabel>
+                        <IonLabel position="stacked" color="customs">Mobile Number</IonLabel>
                         <IonInput className={styles.field} type="tel" placeholder="07XXXXXXXX" required={true}/>
                     </IonItem>
                 </IonCol>
@@ -48,14 +48,14 @@ const RegisterControls: React.FC = () => {
             <IonRow className="ion-justify-content-center">
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">Address Line 1</IonLabel>
+                        <IonLabel position="stacked" color="customs">Address Line 1</IonLabel>
                         <IonInput className={styles.field} type="text" placeholder="Address Line 1" required={true}/>
                     </IonItem>
                 </IonCol>
                 
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">Address Line 2</IonLabel>
+                        <IonLabel position="stacked" color="customs">Address Line 2</IonLabel>
                         <IonInput className={styles.field} type="text" placeholder="Address Line 2" required={true}/>
                     </IonItem>
                 </IonCol>
@@ -65,14 +65,14 @@ const RegisterControls: React.FC = () => {
             <IonRow className="ion-justify-content-center">
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">GN Division</IonLabel>
+                        <IonLabel position="stacked" color="customs">GN Division</IonLabel>
                         <IonInput className={styles.field} type="text" placeholder="GN Division" required={true}/>
                     </IonItem>
                 </IonCol>
                 
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">City</IonLabel>
+                        <IonLabel position="stacked" color="customs">City</IonLabel>
                         <IonInput className={styles.field} type="text" placeholder="City" required={true}/>
                     </IonItem>
                 </IonCol>
@@ -86,7 +86,7 @@ const RegisterControls: React.FC = () => {
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">Password</IonLabel>
+                        <IonLabel position="stacked" color="customs">Password</IonLabel>
                         <IonInput className={styles.field} type="password" placeholder="Password" required={true}/>
                     </IonItem>
                 </IonCol>
@@ -94,7 +94,7 @@ const RegisterControls: React.FC = () => {
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="warning">Confirm Password</IonLabel>
+                        <IonLabel position="stacked" color="customs">Confirm Password</IonLabel>
                         <IonInput className={styles.field} type="password" placeholder="Confirm Password" required={true}/>
                     </IonItem>
                 </IonCol>

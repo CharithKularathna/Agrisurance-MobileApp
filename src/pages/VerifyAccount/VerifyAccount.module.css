@@ -1,1 +1,9 @@
-ECHO is on.
+.page {
+    --background: linear-gradient(90deg, var(--app-primary-color-g1) 0%, var(--app-primary-color-g2) 35%, var(--app-primary-color-g2) 100%);
+}
+
+.verifyBtn {
+    margin-top: 5%;
+    color: var(--app-yellow-shade);
+}
+

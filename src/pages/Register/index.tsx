@@ -1,6 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCol, IonButton, IonText, IonItemDivider } from '@ionic/react';
 import RegisterControls from '../../components/Forms/RegisterControls';
 import Toolbar from '../../components/Nav/Toolbar';
+import PageCaption from '../../components/UI/PageCaption';
 import styles from './Register.module.css';
 
 const Register: React.FC = () => {
@@ -17,13 +18,7 @@ const Register: React.FC = () => {
           </IonToolbar>
         </IonHeader>
 
-        <IonGrid>
-            <IonRow>
-                <IonCol className={styles.registerTitleContainer}>
-                  <IonText className={styles.registerTitle} color="customs">Fill in the following and Register!</IonText>
-                </IonCol>     
-            </IonRow>
-        </IonGrid>
+        <PageCaption>Fill in the following and Register!</PageCaption>
 
         <IonGrid className={styles.bgContent}>
             <IonRow>

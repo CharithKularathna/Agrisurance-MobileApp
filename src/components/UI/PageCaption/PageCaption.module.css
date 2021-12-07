@@ -1,0 +1,13 @@
+.captionContainer {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    border-bottom: 1px solid grey !important;
+}
+
+.caption {
+    margin-top: 10%;
+    font-size: 18px;
+    font-weight: 700;
+}
