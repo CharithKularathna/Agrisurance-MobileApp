@@ -2,18 +2,16 @@
     margin-top: 0%;
 }
 
+.registerTitleContainer {
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: left;
+}
 
 .registerTitle {
     margin-top: 10%;
-    font-family: 'Roboto Bold';
     font-size: 18px;
-    font-weight: bolder;
-    color: var(--app-primary-color);
-    justify-content: center;
-    border: 2px;
-    border-style: solid;
-    border-radius: 2%;
-    background-color: azure;
+    font-weight: 700;
 }
 
 .registerSubTitle {
@@ -26,11 +24,10 @@
 }
 
 .page {
-    --background: var(--app-yellow-shade);
+    --background: linear-gradient(90deg, var(--app-primary-color-g1) 0%, var(--app-primary-color-g2) 35%, var(--app-primary-color-g2) 100%);
 }
 
 .registerBtn {
-    --background: var(--app-light-brown);
     margin-top: 5%;
     color: var(--app-yellow-shade);
 }

@@ -1,7 +1,15 @@
 .toolbarCustom {
-    --background: var(--app-primary-color-dark);
+    --background: var(--app-silver);
+    background: var(--app-silver);
+    --border-radius: 10px;
+    --box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
     text-align: left;
-    font-family: "Roboto Bold";
-    color: var(--app-primary-color-light);
-    font-weight: bolder;
+    color: var(--app-primary-color-dark);
+    
+    
+}
+
+.toolbarTitle {
+    font-size: 18px;
+    font-weight: 800;
 }

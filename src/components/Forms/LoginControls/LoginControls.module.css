@@ -1,5 +1,4 @@
 .loginInputContainer{
-    --background: var(--app-primary-color-dark);
     color: var(--app-yellow-shade);
     border-radius: 20px;
 }

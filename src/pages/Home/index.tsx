@@ -1,10 +1,10 @@
 import { IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonCol, IonTitle, IonToolbar, IonButton, IonText } from '@ionic/react';
 import Toolbar from '../../components/Nav/Toolbar';
 import styles from './Home.module.css';
-import logo from '../../assets/img/logo-green.jpg'
+import logo from '../../assets/img/logo-trans.png'
 
 const Home: React.FC = () => {
-  const logoSrc = "../../assets/img/logo-green.jpg"
+  const logoSrc = "../../assets/img/logo-trans.png"
   const pageStyles = "ion-text-center " + styles.page
   return (
     <IonPage>
@@ -21,17 +21,17 @@ const Home: React.FC = () => {
         <IonGrid>
           <IonRow >
             <IonCol className={styles.caption}>
-              <IonText  color="success" >Welcome to Agrisurance Mobile App</IonText>
+              <IonText className={styles.captionText} color="customs" >Welcome to Agrisurance Mobile App</IonText>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-                <IonButton routerLink="/login" fill="solid" color="warning" className={styles.button}>LOGIN</IonButton>
+                <IonButton routerLink="/login" fill="solid" color="customs" className={styles.button}>LOGIN</IonButton>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-                <IonButton routerLink="/register" fill="outline" color="warning" className={styles.button}>SIGN UP</IonButton>
+                <IonButton routerLink="/register" fill="outline" color="customs" className={styles.button}>SIGN UP</IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>

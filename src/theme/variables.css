@@ -2,6 +2,45 @@
 http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
+
+:root {
+  --ion-color-customp: #386641;
+  --ion-color-customp-rgb: 56,102,65;
+  --ion-color-customp-contrast: #ffffff;
+  --ion-color-customp-contrast-rgb: 255,255,255;
+  --ion-color-customp-shade: #315a39;
+  --ion-color-customp-tint: #4c7554;
+}
+
+.ion-color-customp {
+  --ion-color-base: var(--ion-color-customp);
+  --ion-color-base-rgb: var(--ion-color-customp-rgb);
+  --ion-color-contrast: var(--ion-color-customp-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-customp-contrast-rgb);
+  --ion-color-shade: var(--ion-color-customp-shade);
+  --ion-color-tint: var(--ion-color-customp-tint);
+}
+
+
+:root {
+  --ion-color-customs: #bc6c25;
+  --ion-color-customs-rgb: 188,108,37;
+  --ion-color-customs-contrast: #ffffff;
+  --ion-color-customs-contrast-rgb: 255,255,255;
+  --ion-color-customs-shade: #a55f21;
+  --ion-color-customs-tint: #c37b3b;
+}
+
+.ion-color-customs {
+  --ion-color-base: var(--ion-color-customs);
+  --ion-color-base-rgb: var(--ion-color-customs-rgb);
+  --ion-color-contrast: var(--ion-color-customs-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-customs-contrast-rgb);
+  --ion-color-shade: var(--ion-color-customs-shade);
+  --ion-color-tint: var(--ion-color-customs-tint);
+}
+
+
 :root {
   /** primary **/
   --ion-color-primary: #3880ff;

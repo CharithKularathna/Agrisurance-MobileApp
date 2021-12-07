@@ -12,7 +12,7 @@ const LoginControls: React.FC = () => {
                 <IonCol size="11">
                     <IonItem className={styles.loginInputContainer} lines="none">
                         <IonIcon className="" icon={personOutline} slot="start" />
-                        <IonInput className={styles.field} type="text" placeholder="Username" required/>
+                        <IonInput className={styles.field} color="customs" type="text" placeholder="Username" required/>
                     </IonItem>
                 </IonCol>
                 
@@ -21,7 +21,7 @@ const LoginControls: React.FC = () => {
                 <IonCol size="11">
                     <IonItem className={styles.loginInputContainer} lines="none">
                         <IonIcon className="" icon={lockClosedOutline} slot="start" />
-                        <IonInput className={styles.field} type="password" placeholder="Password" required/>
+                        <IonInput className={styles.field} color="customs" type="password" placeholder="Password" required/>
                     </IonItem>
                 </IonCol>
             </IonRow>

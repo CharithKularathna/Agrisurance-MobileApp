@@ -9,7 +9,7 @@ const Login: React.FC = () => {
 
   return (
     <IonPage>
-      <Toolbar></Toolbar>
+      <Toolbar>Login</Toolbar>
       <IonContent className={pageStyles} fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
@@ -18,9 +18,9 @@ const Login: React.FC = () => {
         </IonHeader>
         <IonGrid>
             <IonRow>
-                <IonCol className={styles.loginTitle}>
+                {/*<IonCol className={styles.loginTitle}>
                   Login to your Account
-                </IonCol>
+                  </IonCol>*/}
                 
             </IonRow>
             <IonRow>
@@ -37,7 +37,7 @@ const Login: React.FC = () => {
                     <LoginControls />
                 </IonCol>
             </IonRow>
-            <IonButton size="default" className={buttonStyles}>LogIn</IonButton>
+            <IonButton size="default" color="customs" className={buttonStyles}>LogIn</IonButton>
         </IonGrid>
         
         <IonGrid>

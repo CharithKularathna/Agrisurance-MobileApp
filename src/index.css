@@ -1,13 +1,16 @@
 /* THEME BASED CUSTOM CSS VARIABLES ARE DECLARED HERE */
 :root {
     --app-primary-color-dark: #386641;
-    --app-primary-color: #6A994E ;
+    --app-primary-color-g1: #0f410f;
+    --app-primary-color-g2: #2f6317;
     --app-primary-color-light: #A7C957;
     --app-danger: #BC4749;
     --app-yellow-shade: #F2E8CF;
     --app-grey-1: #fefefe;
     --app-grey-2: #9a9898;
+    --app-silver: #f1f5f8;
     --app-primary-black: #010101;
-    --app-light-brown: #bc6c25 ;
+    --app-light-brown-g1: #bc6c25 ;
+    --app-light-brown-g2: #db7f2f ;
     --app-blue: #006d77;
 }

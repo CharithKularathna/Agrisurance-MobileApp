@@ -1,5 +1,5 @@
 .page {
-    --background: var(--app-primary-color);
+    --background: linear-gradient(90deg, var(--app-primary-color-g1) 0%, var(--app-primary-color-g2) 35%, var(--app-primary-color-g2) 100%);
     text-align: center;
 }
 
@@ -17,7 +17,11 @@
 
 .caption {
     margin-bottom: 10%;
-    font-weight: bolder;
+}
+
+.captionText {
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .copyrights {

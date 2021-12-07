@@ -1,5 +1,5 @@
 .copyrights {
-    margin-top: 60%;
+    margin-top: 80%;
     font-family: 'Roboto Light';
     font-size: small;
     justify-content: center;
@@ -7,7 +7,7 @@
 }
 
 .bgContent {
-    background-image     : url( '../../assets/img/logo-yellow.jpg');
+    
     background-size      : 100%;
     background-position  : top left;
     background-repeat    : no-repeat;
@@ -16,7 +16,7 @@
 }
 
 .loginControls {
-    margin-top: 18%;
+    margin-top: 30%;
 }
 
 
@@ -44,11 +44,10 @@
 }
 
 .page {
-    --background: var(--app-yellow-shade);
+    --background: linear-gradient(90deg, var(--app-primary-color-g1) 0%, var(--app-primary-color-g2) 35%, var(--app-primary-color-g2) 100%);
 }
 
 .loginBtn {
-    --background: var(--app-light-brown);
-    margin-top: 24%;
+    margin-top: 10%;
     color: var(--app-yellow-shade);
 }
