@@ -2,6 +2,7 @@ import { IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonCol, IonTit
 import Toolbar from '../../components/Nav/Toolbar';
 import styles from './Home.module.css';
 import logo from '../../assets/img/logo-trans.png'
+import { TXT_HOME_TITLE, TXT_LOGIN_BTN, TXT_REGISTER_BTN } from '../../localization';
 
 const Home: React.FC = () => {
   const logoSrc = "../../assets/img/logo-trans.png"
@@ -21,17 +22,17 @@ const Home: React.FC = () => {
         <IonGrid>
           <IonRow >
             <IonCol className={styles.caption}>
-              <IonText className={styles.captionText} color="customs" >Welcome to Agrisurance Mobile App</IonText>
+              <IonText className={styles.captionText} color="customs" >{TXT_HOME_TITLE}</IonText>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-                <IonButton routerLink="/login" fill="solid" color="customs" className={styles.button}>LOGIN</IonButton>
+                <IonButton routerLink="/login" fill="solid" color="customs" className={styles.button}>{TXT_LOGIN_BTN}</IonButton>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-                <IonButton routerLink="/register" fill="outline" color="customs" className={styles.button}>SIGN UP</IonButton>
+                <IonButton routerLink="/register" fill="outline" color="customs" className={styles.button}>{TXT_REGISTER_BTN}</IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>

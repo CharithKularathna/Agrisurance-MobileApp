@@ -7,7 +7,7 @@ type User = {
 }
 
 const initialState = {
-    lang: "en",
+    lang: "si",
     token: null,
     is_logged_in: false,
     user: null,
