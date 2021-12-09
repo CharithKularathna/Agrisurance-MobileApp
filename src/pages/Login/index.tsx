@@ -3,9 +3,22 @@ import LoginControls from '../../components/Forms/LoginControls';
 import Toolbar from '../../components/Nav/Toolbar';
 import styles from './Login.module.css';
 
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAuthToken, getLoginError, getLoading } from '../../store/selectors';
+import { Alert } from '../../components/UI/Alert/Alert';
+import { login } from '../../store/actions/userActions';
+
 const Login: React.FC = () => {
-   const pageStyles = "ion-text-center " + styles.page
-   const buttonStyles = "" + styles.loginBtn
+  const pageStyles = "ion-text-center " + styles.page
+  const buttonStyles = "" + styles.loginBtn
+
+  const dispatch = useDispatch()
+  //const dispatchResetUI = useDispatch()
+  const [credentials, setCredentials] = useState({username: "", password: ""})
+  const [password, setpassword] = useState("")
+  const token = useSelector(getAuthToken)
+  let error = useSelector(getLoginError)
 
   return (
     <IonPage>
@@ -34,10 +47,18 @@ const Login: React.FC = () => {
         <IonGrid className={styles.bgContent}>
             <IonRow>
                 <IonCol className={styles.loginControls}>
-                    <LoginControls />
+                    <LoginControls setCredentials={setCredentials} />
                 </IonCol>
+        
             </IonRow>
-            <IonButton size="default" color="customs" className={buttonStyles}>LogIn</IonButton>
+            {error &&
+              <IonRow>
+                  <IonCol>
+                    <Alert type="error" message="Failed to login. Please check the Credentials."/>
+                  </IonCol>
+              </IonRow>
+            }
+            <IonButton size="default" color="customs" className={buttonStyles} onClick={() => dispatch(login(credentials))}>LogIn</IonButton>
         </IonGrid>
         
         <IonGrid>
