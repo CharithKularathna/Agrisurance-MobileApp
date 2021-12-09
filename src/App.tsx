@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Verify from './pages/VerifyAccount';
+import SelectLang from './pages/SelectLang';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -25,6 +26,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -33,7 +35,8 @@ const App: React.FC = () => (
         <Route exact path="/register" ><Register /></Route>
         <Route exact path="/login" ><Login /></Route>
         <Route exact path="/home" ><Home /></Route>
-        <Route exact path="/"> <Redirect to="/home" /> </Route>
+        <Route exact path="/lang" component={SelectLang} ></Route>
+        <Route exact path="/"> <Redirect to="/lang" /> </Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

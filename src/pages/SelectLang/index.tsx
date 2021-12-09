@@ -1,19 +1,27 @@
 import { IonContent, IonGrid, IonHeader, IonImg, IonPage, IonRow, IonCol, IonTitle, IonToolbar, IonButton, IonText } from '@ionic/react';
 import Toolbar from '../../components/Nav/Toolbar';
-import styles from './Home.module.css';
+import styles from './SelectLang.module.css';
 import logo from '../../assets/img/logo-trans.png'
-import { getString, TXT_HOME_TITLE, TXT_LOGIN_BTN, TXT_REGISTER_BTN } from '../../localization';
-import { useSelector } from 'react-redux';
+import { TXT_LANG_ENG, TXT_LANG_SIN, TXT_SIN_BTN, TXT_ENG_BTN } from '../../localization';
+import { useDispatch, useSelector } from 'react-redux';
 import { getLang } from '../../store/selectors';
+import { setLang } from '../../store/actions/userActions';
+import { useEffect } from 'react';
 
-const Home: React.FC = () => {
+const SelectLang: React.FC = ({history}:any) => {
   const logoSrc = "../../assets/img/logo-trans.png"
   const pageStyles = "ion-text-center " + styles.page
+  const dispatch = useDispatch();
   const lang = useSelector(getLang)
+
+  useEffect(() => {
+    if(lang && lang!=="") {
+      history.push('/home')
+    }
+  },[lang])
 
   return (
     <IonPage>
-      <Toolbar></Toolbar>
       <IonContent className={pageStyles} fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
@@ -26,17 +34,20 @@ const Home: React.FC = () => {
         <IonGrid>
           <IonRow >
             <IonCol className={styles.caption}>
-              <IonText className={styles.captionText} color="customs" >{getString(TXT_HOME_TITLE, lang)}</IonText>
+              <IonText className={styles.captionText} color="customs" >{TXT_LANG_ENG}</IonText>
+            </IonCol>
+          </IonRow>
+          <IonRow >
+            <IonCol className={styles.caption}>
+              <IonText className={styles.captionText} color="customs" >{TXT_LANG_SIN}</IonText>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-                <IonButton routerLink="/login" fill="solid" color="customs" className={styles.button}>{getString(TXT_LOGIN_BTN, lang)}</IonButton>
+                <IonButton fill="outline" color="customs" className={styles.button} onClick={() => dispatch(setLang("si"))}>{TXT_SIN_BTN}</IonButton>
             </IonCol>
-          </IonRow>
-          <IonRow>
             <IonCol>
-                <IonButton routerLink="/register" fill="outline" color="customs" className={styles.button}>{getString(TXT_REGISTER_BTN, lang)}</IonButton>
+                <IonButton fill="outline" color="customs" className={styles.button} onClick={() => dispatch(setLang("en"))}>{TXT_ENG_BTN}</IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>
@@ -52,4 +63,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default SelectLang;

@@ -44,3 +44,18 @@ export const login = ( data: any ) => {
             } );
     };
 };
+
+export const setLang = (data : string) => {
+    if (data == "si"){
+        return {
+            type: actionTypes.SET_LANG_SIN,
+        };
+    }
+
+    else {
+        return {
+            type: actionTypes.SET_LANG_ENG,  
+        };
+    }
+        
+}

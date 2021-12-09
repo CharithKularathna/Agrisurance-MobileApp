@@ -6,3 +6,6 @@ export const LOGIN_FAILURE = "LOGIN_FAILURE"
 export const REGISTER = "REGISTER"
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS"
 export const REGISTER_FAILURE = "REGISTER_FAILURE"
+
+export const SET_LANG_ENG = "SET_LANG_ENG"
+export const SET_LANG_SIN = "SET_LANG_SIN"

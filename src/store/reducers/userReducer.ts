@@ -11,7 +11,7 @@ type User = {
 }
 
 const initialState = {
-    lang: "si",
+    lang: "",
     token: null,
     is_logged_in: false,
     user: null,
@@ -22,6 +22,16 @@ const initialState = {
 
 export function userReducer(state = initialState, action: any) {
     switch ( action.type ) {
+        case actionTypes.SET_LANG_ENG:
+            return {
+                ...state,
+                lang: "en"
+            }
+        case actionTypes.SET_LANG_SIN:
+            return {
+                ...state,
+                lang: "si"
+            }
         case actionTypes.LOGIN_START:
             return {
                 ...state,

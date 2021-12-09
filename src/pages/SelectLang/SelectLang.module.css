@@ -1,0 +1,34 @@
+.page {
+    --background: linear-gradient(90deg, var(--app-primary-color-g1) 0%, var(--app-primary-color-g2) 35%, var(--app-primary-color-g2) 100%);
+    text-align: center;
+}
+
+.logo {
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.button {
+    width: 70%;
+    color: var(--app-yellow-shade);
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.caption {
+    margin-bottom: 2%;
+}
+
+.captionText {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.copyrights {
+    margin-top: 50%;
+    font-family: 'Roboto Light';
+    font-size: small;
+    justify-content: center;
+    color: var(--app-grey-2);
+}
