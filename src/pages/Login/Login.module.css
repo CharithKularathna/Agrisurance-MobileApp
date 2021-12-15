@@ -1,6 +1,5 @@
 .copyrights {
     margin-top: 80%;
-    font-family: 'Roboto Light';
     font-size: small;
     justify-content: center;
     color: var(--app-grey-2);
@@ -22,7 +21,6 @@
 
 .loginTitle {
     margin-top: 10%;
-    font-family: 'Roboto Bold';
     font-size: 18px;
     font-weight: bolder;
     font-variant: normal;
@@ -35,7 +33,6 @@
 }
 
 .loginSubTitle {
-    font-family: 'Roboto Light';
     font-variant: small-caps;
     color: var(--app-primary-color);
     font-size: 20px;

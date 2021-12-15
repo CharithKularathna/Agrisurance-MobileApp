@@ -14,7 +14,6 @@
 }
 
 .registerSubTitle {
-    font-family: 'Roboto Light';
     font-variant: small-caps;
     color: var(--app-primary-color);
     font-size: 18px;
