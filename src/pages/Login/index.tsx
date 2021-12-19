@@ -16,7 +16,7 @@ const Login: React.FC = () => {
   const dispatch = useDispatch()
   //const dispatchResetUI = useDispatch()
   const [credentials, setCredentials] = useState({username: "", password: ""})
-  const [password, setpassword] = useState("")
+  //const [password, setpassword] = useState("")
   const token = useSelector(getAuthToken)
   let error = useSelector(getLoginError)
 

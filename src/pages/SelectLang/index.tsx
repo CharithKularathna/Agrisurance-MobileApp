@@ -42,12 +42,16 @@ const SelectLang: React.FC = ({history}:any) => {
               <IonText className={styles.captionText} color="customs" >{TXT_LANG_SIN}</IonText>
             </IonCol>
           </IonRow>
-          <IonRow>
-            <IonCol>
+          <IonRow style={{marginTop:'10px'}}>
+            <IonCol size='1'>
+            </IonCol>
+            <IonCol size='5'>
                 <IonButton fill="outline" color="customs" className={styles.button} onClick={() => dispatch(setLang("si"))}>{TXT_SIN_BTN}</IonButton>
             </IonCol>
-            <IonCol>
+            <IonCol size='5'>
                 <IonButton fill="outline" color="customs" className={styles.button} onClick={() => dispatch(setLang("en"))}>{TXT_ENG_BTN}</IonButton>
+            </IonCol>
+            <IonCol size='1'>
             </IonCol>
           </IonRow>
         </IonGrid>

@@ -20,5 +20,6 @@ export const TXT_HOME_TITLE : string[] = ["Welcome to Agrisurance Mobile App", "
 export const TXT_LOGIN_BTN : string[] = ["Login", "ලොග් වන්න" ]
 export const TXT_REGISTER_BTN : string[] = ["Register","ලියාපදිංචි වීමට"]
 
+// LABELS
 
 

@@ -13,7 +13,7 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
-      <Toolbar></Toolbar>
+      {/*<Toolbar></Toolbar>*/}
       <IonContent className={pageStyles} fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
