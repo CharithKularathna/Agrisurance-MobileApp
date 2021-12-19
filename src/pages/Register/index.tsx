@@ -9,11 +9,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAuthToken, getRegisterError, getLoading } from '../../store/selectors';
 import { Alert } from '../../components/UI/Alert/Alert';
 import { register } from '../../store/actions/registerActions';
+import { isFormFilled } from '../../utility/formValidation';
+
 
 const Register: React.FC = () => {
   const pageStyles = "ion-text-center " + styles.page
   const buttonStyles = "" + styles.registerBtn
-
+  let formFilled = false;
+  let passwordMismatch = false;
+  
   const dispatch = useDispatch()
   //const dispatchResetUI = useDispatch()
   const [credentials, setCredentials] = useState({
@@ -32,7 +36,16 @@ const Register: React.FC = () => {
   const token = useSelector(getAuthToken)
   let error = useSelector(getRegisterError)
 
-  console.log(credentials)
+  //Check Password and Confirm Password
+  if ((credentials.confirmPassword.length > 0) && (credentials.password != credentials.confirmPassword)) {
+      passwordMismatch = true
+  }
+  else if (credentials.password === credentials.confirmPassword) {
+      passwordMismatch = false
+  }
+
+  //Check Form filled
+  formFilled = (isFormFilled(credentials) && !passwordMismatch )
 
   return (
     <IonPage>
@@ -59,7 +72,14 @@ const Register: React.FC = () => {
                   </IonCol>
               </IonRow>
             }
-            <IonButton color="customs" size="default" className={buttonStyles} onClick={() => dispatch(register(credentials))}>Register</IonButton>
+            {passwordMismatch &&
+              <IonRow>
+                  <IonCol>
+                    <Alert type="error" message="Password and Confirm Password do not match."/>
+                  </IonCol>
+              </IonRow>
+            }
+            <IonButton disabled={!formFilled} color="customs" size="default" className={buttonStyles} onClick={() => dispatch(register(credentials))}>Register</IonButton>
         </IonGrid>
       </IonContent>
     </IonPage>
