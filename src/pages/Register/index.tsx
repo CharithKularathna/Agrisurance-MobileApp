@@ -51,11 +51,11 @@ const Register: React.FC = () => {
     <IonPage>
       <Toolbar>Register</Toolbar>
       <IonContent className={pageStyles} fullscreen>
-        <IonHeader collapse="condense">
+        {/* <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Register</IonTitle>
           </IonToolbar>
-        </IonHeader>
+        </IonHeader> */}
 
         <PageCaption>Fill in the following and Register!</PageCaption>
 

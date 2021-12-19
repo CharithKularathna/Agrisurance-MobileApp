@@ -1,5 +1,7 @@
 import * as actionTypes from './types';
 import axiosInstance from '../../axios-agri';
+import { registerFormData } from '../../types';
+import { buildAddressStr } from '../../utility/utility';
 
 export const registerStart = () => {
     return {
@@ -23,7 +25,15 @@ export const registerFailed = (error : string) => {
 
 
 
-export const register = ( data: any ) => {
+export const register = ( data: registerFormData ) => {
+    const reqData = {
+        First_Name: data.fname,
+        Last_Name: data.lname,
+        username: data.mobile,
+        NIC: data.nic,
+        Address: buildAddressStr(data),
+        password: data.password
+    }
     return (dispatch:any)  => {
         dispatch( registerStart() );
         axiosInstance.post( 'register', data )

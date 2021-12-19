@@ -24,11 +24,11 @@ const Login: React.FC = () => {
     <IonPage>
       <Toolbar>Login</Toolbar>
       <IonContent className={pageStyles} fullscreen>
-        <IonHeader collapse="condense">
+        {/* <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Login to your Account</IonTitle>
           </IonToolbar>
-        </IonHeader>
+        </IonHeader> */}
         <IonGrid>
             <IonRow>
                 {/*<IonCol className={styles.loginTitle}>

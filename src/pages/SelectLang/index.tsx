@@ -23,11 +23,11 @@ const SelectLang: React.FC = ({history}:any) => {
   return (
     <IonPage>
       <IonContent className={pageStyles} fullscreen>
-        <IonHeader collapse="condense">
+        {/* <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
-        </IonHeader>
+        </IonHeader> */}
 
         <IonImg className={styles.logo} src={logo} />
 

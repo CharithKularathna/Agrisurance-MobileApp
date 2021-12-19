@@ -5,18 +5,7 @@ import { personOutline, lockClosedOutline } from 'ionicons/icons';
 
 import styles from './RegisterControls.module.css'
 
-interface registerFormData {
-    fname: string 
-    lname: string;
-    nic:string;
-    mobile:string;
-    addressLine1:string;
-    addressLine2:string;
-    gn:string;
-    city:string;
-    password:string;
-    confirmPassword:string;
-}
+import { registerFormData } from '../../../types';
 
 const RegisterControls: React.FC<any> = ({ setCredentials, credentials } : { setCredentials : ({}) => void , credentials: registerFormData}) => {
     /*
