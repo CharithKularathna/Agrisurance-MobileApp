@@ -5,5 +5,8 @@ export const getAuthToken = (state: RootState) => state.user.token
 export const getLoginError = (state: RootState) => state.user.error
 export const getLoading = (state: RootState) => state.user.isLoading
 
+export const getRegisterSuccess = (state: RootState) => state.register.regSuccess
 export const getRegisterError = (state: RootState) => state.register.regError
 export const getRegisterLoading = (state: RootState) => state.register.isLoading
+export const getUserMobile = (state: RootState) => state.register.user
+export const getVerifyError = (state: RootState) => state.register.verifyError

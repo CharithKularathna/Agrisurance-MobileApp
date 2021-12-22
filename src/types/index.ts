@@ -10,3 +10,17 @@ export interface registerFormData {
     password:string;
     confirmPassword:string;
 }
+
+export interface otp {
+    d1: string;
+    d2: string;
+    d3: string;
+    d4: string;
+    d5: string;
+    d6: string;
+}
+
+export interface verifyRequestData {
+    otp: Number;
+    phoneNo: string;
+}

@@ -29,6 +29,7 @@ export function registerReducer(state = initialState, action: any) {
                 ...state,
                 isLoading: true,
                 regError: "",
+                user: "",
             }
         case actionTypes.REGISTER_SENT:
             return {
@@ -36,13 +37,15 @@ export function registerReducer(state = initialState, action: any) {
                 regError: "",
                 regSuccess: true,
                 isLoading: false,
+                user:action.user
             }
         case actionTypes.REGISTER_FAILURE:
             return {
                 ...state,
                 regSuccess: false,
                 isLoading: false,
-                regError: action.error
+                regError: action.error,
+                user:""
             }
         case actionTypes.VERIFY_START:
             return {
@@ -56,6 +59,7 @@ export function registerReducer(state = initialState, action: any) {
                 verifyError: "",
                 verifySuccess: true,
                 isLoading: false,
+                user:"",
             }
         case actionTypes.VERIFY_FAILURE:
             return {

@@ -1,5 +1,5 @@
 import { IonGrid, IonInput, IonItem, IonLabel, IonRow, IonCol, IonIcon, IonList, IonItemDivider } from '@ionic/react';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { personOutline, lockClosedOutline } from 'ionicons/icons';
 
