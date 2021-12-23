@@ -7,9 +7,13 @@ import Register from './pages/Register';
 import Verify from './pages/VerifyAccount';
 import Verified from './pages/Verified';
 import SelectLang from './pages/SelectLang';
+import FarmerDashboard from './pages/Farmer/Dashboard'
+import FarmerEnquiry from './pages/Farmer/Enquiry'
+import FarmerHistory from './pages/Farmer/History'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
+
 
 /* Basic CSS for apps built with Ionic */
 import '@ionic/react/css/normalize.css';
@@ -26,22 +30,37 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { useSelector } from 'react-redux';
+import { getUserType } from './store/selectors';
+import { FARMER } from './constants';
 
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/verified" ><Verified /></Route>
-        <Route exact path="/verify" ><Verify /></Route>
-        <Route exact path="/register" ><Register /></Route>
-        <Route exact path="/login" ><Login /></Route>
-        <Route exact path="/home" ><Home /></Route>
-        <Route exact path="/lang" component={SelectLang} ></Route>
-        <Route exact path="/"> <Redirect to="/lang" /> </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+
+const App: React.FC = () => {
+  const userType = useSelector(getUserType)
+  // const farmerAuthroutes = [
+  //     <Route exact path="/dashboard" component={FarmerDashboard}></Route>,
+  //     <Route exact path="/enquiry" component={FarmerEnquiry}></Route>,
+  //     <Route exact path="/history" component={FarmerHistory}></Route>
+  // ]
+  
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          {/* {userType == FARMER ? <Route exact path="/dashboard" component={FarmerDashboard}></Route> : null} */}
+          <Route exact path="/dashboard" component={FarmerDashboard}></Route>
+          <Route exact path="/verified" ><Verified /></Route>
+          <Route exact path="/verify" ><Verify /></Route>
+          <Route exact path="/register" ><Register /></Route>
+          <Route exact path="/login" ><Login /></Route>
+          <Route exact path="/home" ><Home /></Route>
+          <Route exact path="/lang" component={SelectLang} ></Route>
+          <Route exact path="/"> <Redirect to="/lang" /> </Route>
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+  )
+};
 
 export default App;

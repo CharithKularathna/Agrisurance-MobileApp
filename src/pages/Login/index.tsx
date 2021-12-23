@@ -8,8 +8,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAuthToken, getLoginError, getLoading } from '../../store/selectors';
 import { Alert } from '../../components/UI/Alert/Alert';
 import { login } from '../../store/actions/userActions';
+import { Redirect } from 'react-router';
 
-const Login: React.FC = () => {
+const Login: React.FC<any> = ({history}) => {
   const pageStyles = "ion-text-center " + styles.page
   const buttonStyles = "" + styles.loginBtn
 
@@ -20,7 +21,7 @@ const Login: React.FC = () => {
   const token = useSelector(getAuthToken)
   let error = useSelector(getLoginError)
 
-  return (
+  const content = token ? <Redirect to="/dashboard" /> : (
     <IonPage>
       <Toolbar>Login</Toolbar>
       <IonContent className={pageStyles} fullscreen>
@@ -68,6 +69,13 @@ const Login: React.FC = () => {
         </IonGrid>
       </IonContent>
     </IonPage>
+  )
+
+  return (
+    <>
+      {content}
+    </>
+    
   );
 };
 

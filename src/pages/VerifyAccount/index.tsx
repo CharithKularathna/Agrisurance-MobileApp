@@ -39,11 +39,7 @@ const VerifyAccount: React.FC<any> = ({history}) => {
     otpSendDispatch(otpSend(userMobile))
   }, [])
   
-  if (verifySuccess) {
-    history.push("/verified")
-  }
-  
-  return (
+  const content = verifySuccess ? <Redirect to='/verified'/> : (
     <IonPage>
       <Toolbar>Verify Account</Toolbar>
       <IonContent className={pageStyles} fullscreen>
@@ -73,6 +69,13 @@ const VerifyAccount: React.FC<any> = ({history}) => {
         {/* <PopOver isOpen={true} /> */}
       </IonContent>
     </IonPage>
+  )
+  
+  
+  return (
+    <>
+      {content}
+    </>
   );
 };
 

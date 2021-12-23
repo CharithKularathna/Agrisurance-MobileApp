@@ -4,12 +4,17 @@ import styles from './Home.module.css';
 import logo from '../../assets/img/logo-trans.png'
 import { getString, TXT_HOME_TITLE, TXT_LOGIN_BTN, TXT_REGISTER_BTN } from '../../localization';
 import { useSelector } from 'react-redux';
-import { getLang } from '../../store/selectors';
+import { getAuthToken, getLang } from '../../store/selectors';
 
-const Home: React.FC = () => {
+const Home: React.FC<any> = ({history}) => {
   const logoSrc = "../../assets/img/logo-trans.png"
   const pageStyles = "ion-text-center " + styles.page
   const lang = useSelector(getLang)
+  const token = useSelector(getAuthToken)
+
+  if (token && token !=""){
+    history.push('/dashboard')
+  }
 
   return (
     <IonPage>

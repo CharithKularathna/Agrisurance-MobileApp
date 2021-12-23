@@ -1,3 +1,4 @@
+import { FARMER, OFFICER } from '../../constants';
 import * as actionTypes from '../actions/types';
 
 type User = {
@@ -44,7 +45,8 @@ export function userReducer(state = initialState, action: any) {
                 error: "",
                 success: true,
                 loading: false,
-                token: action.token
+                token: action.token,
+                user_type: FARMER
             }
         case actionTypes.LOGIN_FAILURE:
             return {
