@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Verify from './pages/VerifyAccount';
+import Verified from './pages/Verified';
 import SelectLang from './pages/SelectLang';
 
 /* Core CSS required for Ionic components to work properly */
@@ -31,6 +32,7 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+        <Route exact path="/verified" ><Verified /></Route>
         <Route exact path="/verify" ><Verify /></Route>
         <Route exact path="/register" ><Register /></Route>
         <Route exact path="/login" ><Login /></Route>

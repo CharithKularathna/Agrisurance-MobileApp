@@ -7,12 +7,14 @@ import React, {useEffect, useState} from 'react';
 
 import styles from './VerifyAccount.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserMobile, getVerifyError } from '../../store/selectors';
+import { getUserMobile, getVerifyError, getVerifySuccess } from '../../store/selectors';
 import { otpSend, verify } from '../../store/actions/registerActions';
 import { numberModifier, parseOtpToInt } from '../../utility/formValidation';
 import { Alert } from '../../components/UI/Alert/Alert';
+import PopOver from '../../components/UI/PopOver';
+import { Redirect } from 'react-router';
 
-const VerifyAccount: React.FC = () => {
+const VerifyAccount: React.FC<any> = ({history}) => {
   const pageStyles = "ion-text-center " + styles.page
   const buttonStyles = "" + styles.verifyBtn
 
@@ -28,6 +30,7 @@ const VerifyAccount: React.FC = () => {
   console.log(otp)
   const userMobile = useSelector(getUserMobile)
   let verifyError = useSelector(getVerifyError)
+  const verifySuccess = useSelector(getVerifySuccess)
   const otpSendDispatch = useDispatch()
   const verifyDispatch = useDispatch()
 
@@ -36,6 +39,9 @@ const VerifyAccount: React.FC = () => {
     otpSendDispatch(otpSend(userMobile))
   }, [])
   
+  if (verifySuccess) {
+    history.push("/verified")
+  }
   
   return (
     <IonPage>
@@ -64,6 +70,7 @@ const VerifyAccount: React.FC = () => {
             }
             <IonButton onClick={() => verifyDispatch(verify({otp: parseOtpToInt(otp), phoneNo: numberModifier(userMobile)}))} color="customs" size="default" className={buttonStyles}>Verify</IonButton>
         </IonGrid>
+        {/* <PopOver isOpen={true} /> */}
       </IonContent>
     </IonPage>
   );

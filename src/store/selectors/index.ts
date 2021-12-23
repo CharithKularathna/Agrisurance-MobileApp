@@ -10,3 +10,4 @@ export const getRegisterError = (state: RootState) => state.register.regError
 export const getRegisterLoading = (state: RootState) => state.register.isLoading
 export const getUserMobile = (state: RootState) => state.register.user
 export const getVerifyError = (state: RootState) => state.register.verifyError
+export const getVerifySuccess = (state: RootState) => state.register.verifySuccess
