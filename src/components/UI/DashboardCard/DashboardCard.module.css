@@ -1,0 +1,17 @@
+.card {
+    height: 15rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: var(--app-primary-color-dark);
+    border-radius: 5%;
+}
+
+.cardSubtitle {
+    margin-top: 1rem;
+}
+
+.iconWrapper {
+    --background: var(--app-primary-color-dark);
+    align-content: center;
+}

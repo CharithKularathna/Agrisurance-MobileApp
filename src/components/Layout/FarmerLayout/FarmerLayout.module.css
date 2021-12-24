@@ -1,0 +1,29 @@
+.toolbarCustom {
+    --background: var(--app-silver);
+    background: var(--app-silver);
+    --border-radius: 10px;
+    --box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
+    text-align: left;
+    color: var(--app-primary-color-dark);
+    
+}
+
+.toolbarTitle {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.page{
+    --background: linear-gradient(90deg, var(--app-primary-color-g1) 0%, var(--app-primary-color-g2) 35%, var(--app-primary-color-g2) 100%);
+    height: 84%;
+}
+
+.footer{
+    --background: var(--app-silver);
+    background: var(--app-silver);
+}
+
+.footerBtn {
+    padding-right: 30%;
+    padding-left: 30%;
+}
