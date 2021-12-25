@@ -1,9 +1,9 @@
 import { IonButton, IonButtons, IonContent, IonFooter, IonHeader, IonIcon, IonPage, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react'
-import styles from './FarmerLayout.module.css'
+import styles from './DashboardLayout.module.css'
 import { homeOutline, settingsOutline, notificationsOutline } from 'ionicons/icons';
 
-const FarmerLayout:React.FC<any> = ({children, title, footer}) => {
+const DashboardLayout:React.FC<any> = ({children, title, footer}) => {
     const pageStyles = "ion-text-center " + styles.page
     return (
         <IonPage>
@@ -38,4 +38,4 @@ const FarmerLayout:React.FC<any> = ({children, title, footer}) => {
     )
 }
 
-export default FarmerLayout;
+export default DashboardLayout;

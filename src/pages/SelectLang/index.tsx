@@ -7,12 +7,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getLang } from '../../store/selectors';
 import { setLang } from '../../store/actions/userActions';
 import { useEffect } from 'react';
+import { useHistory } from 'react-router';
 
-const SelectLang: React.FC = ({history}:any) => {
+const SelectLang: React.FC = () => {
   const logoSrc = "../../assets/img/logo-trans.png"
   const pageStyles = "ion-text-center " + styles.page
   const dispatch = useDispatch();
   const lang = useSelector(getLang)
+  const history = useHistory()
 
   useEffect(() => {
     if(lang && lang!=="") {

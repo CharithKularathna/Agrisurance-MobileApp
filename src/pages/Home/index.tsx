@@ -5,12 +5,17 @@ import logo from '../../assets/img/logo-trans.png'
 import { getString, TXT_HOME_TITLE, TXT_LOGIN_BTN, TXT_REGISTER_BTN } from '../../localization';
 import { useSelector } from 'react-redux';
 import { getAuthToken, getLang } from '../../store/selectors';
+import { useHistory } from 'react-router';
 
-const Home: React.FC<any> = ({history}) => {
+const Home: React.FC<any> = () => {
   const logoSrc = "../../assets/img/logo-trans.png"
   const pageStyles = "ion-text-center " + styles.page
+  
+  const history = useHistory()
+  
   const lang = useSelector(getLang)
   const token = useSelector(getAuthToken)
+
 
   if (token && token !=""){
     history.push('/dashboard')

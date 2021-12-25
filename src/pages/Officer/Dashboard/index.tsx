@@ -4,7 +4,7 @@ import DashboardLayout from '../../../components/Layout/DashboardLayout'
 import DashboardCard from '../../../components/UI/DashboardCard'
 import PageCaption from '../../../components/UI/PageCaption'
 import { paperPlaneSharp, documentTextSharp } from 'ionicons/icons'
-import enquiryImg from '../../../assets/img/enquiry-card-gray.png'
+import respondImg from '../../../assets/img/respond-card.png'
 import historyImg from '../../../assets/img/history-card-gray.png'
 
 import styles from './Dashboard.module.css'
@@ -12,12 +12,12 @@ import styles from './Dashboard.module.css'
 const Dashboard:React.FC = ({history}:any) => {
     return (
         <DashboardLayout title="Dashboard" footer={true}>
-            <PageCaption>Welcome Back Farmer!</PageCaption>
+            <PageCaption>Welcome Back Officer!</PageCaption>
             <IonGrid>
-                <DashboardCard routeStr="/enquiry" subTitle="Submit" title="Enquiry">
-                    <IonImg className={styles.cardImage} src={enquiryImg}></IonImg>
+                <DashboardCard routeStr="/respond" subTitle="Respond to" title="Enquiries">
+                    <IonImg className={styles.cardImage} src={respondImg}></IonImg>
                 </DashboardCard>
-                <DashboardCard routeStr="/history" subTitle="Enquiry" title="History">
+                <DashboardCard routeStr="/responses" subTitle="Enquiry" title="History">
                     <IonImg className={styles.cardImage} src={historyImg}></IonImg>
                 </DashboardCard>
             </IonGrid>

@@ -8,6 +8,7 @@ import Verify from './pages/VerifyAccount';
 import Verified from './pages/Verified';
 import SelectLang from './pages/SelectLang';
 import FarmerDashboard from './pages/Farmer/Dashboard'
+import OfficerDashboard from './pages/Officer/Dashboard'
 import FarmerEnquiry from './pages/Farmer/Enquiry'
 import FarmerHistory from './pages/Farmer/History'
 
@@ -49,7 +50,7 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonRouterOutlet>
           {/* {userType == FARMER ? <Route exact path="/dashboard" component={FarmerDashboard}></Route> : null} */}
-          <Route exact path="/dashboard" component={FarmerDashboard}></Route>
+          <Route exact path="/dashboard" component={userType == FARMER ? FarmerDashboard : OfficerDashboard}></Route>
           <Route exact path="/verified" ><Verified /></Route>
           <Route exact path="/verify" ><Verify /></Route>
           <Route exact path="/register" ><Register /></Route>
