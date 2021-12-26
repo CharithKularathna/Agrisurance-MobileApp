@@ -1,5 +1,6 @@
 import * as actionTypes from './types';
 import axiosInstance from '../../axios-agri';
+import { FARMER, OFFICER } from '../../constants';
 
 export const loginStart = () => {
     return {
@@ -7,10 +8,11 @@ export const loginStart = () => {
     };
 }
 
-export const loginSuccess = (token: string) => {
+export const loginSuccess = (token: string, role: string) => {
     return {
         type: actionTypes.LOGIN_SUCCESS,
-        token: token
+        token: token,
+        role: role == "USER" ? FARMER : OFFICER
     };
 }
 
@@ -31,7 +33,7 @@ export const login = ( data: any ) => {
             .then( response => {
                 console.log( response.data );
                 try {
-                    dispatch( loginSuccess(response.data.token) );
+                    dispatch( loginSuccess(response.data.token, response.data.role) );
                 }
                 catch {
                     dispatch( loginFailed( "Login Failed. Please Check Credentials!" ) )

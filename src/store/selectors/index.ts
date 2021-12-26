@@ -12,3 +12,12 @@ export const getRegisterLoading = (state: RootState) => state.register.isLoading
 export const getUserMobile = (state: RootState) => state.register.user
 export const getVerifyError = (state: RootState) => state.register.verifyError
 export const getVerifySuccess = (state: RootState) => state.register.verifySuccess
+
+export const getClaimDetails = (state: RootState) => ({
+    disasterType: state.claim.type,
+    description: state.claim.description,
+    area: state.claim.area,
+    office: state.claim.office
+})
+
+export const getAddDetailsSuccess = (state: RootState) => state.claim.addDetailsSuccess

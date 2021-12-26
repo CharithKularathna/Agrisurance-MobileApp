@@ -10,7 +10,7 @@ import { Alert } from '../../components/UI/Alert/Alert';
 import { login } from '../../store/actions/userActions';
 import { Redirect } from 'react-router';
 
-const Login: React.FC<any> = ({history}) => {
+const Login: React.FC<any> = () => {
   const pageStyles = "ion-text-center " + styles.page
   const buttonStyles = "" + styles.loginBtn
 

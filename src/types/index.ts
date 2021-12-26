@@ -24,3 +24,10 @@ export interface verifyRequestData {
     otp: Number;
     phoneNo: string;
 }
+
+export interface claimDetails {
+    description: string;
+    office: string;
+    type: string;
+    area: number;
+}

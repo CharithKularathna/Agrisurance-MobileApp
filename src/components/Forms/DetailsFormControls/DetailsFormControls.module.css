@@ -1,0 +1,13 @@
+.detailsInputContainer{
+    color: var(--app-yellow-shade);
+    border-radius: 10px;
+}
+
+.detailsTextAreaContainer{
+    color: var(--app-yellow-shade);
+    border-radius: 10px;
+}
+
+.field{
+    border-radius: 20px;
+}

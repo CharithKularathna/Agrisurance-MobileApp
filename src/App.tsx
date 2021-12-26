@@ -9,8 +9,8 @@ import Verified from './pages/Verified';
 import SelectLang from './pages/SelectLang';
 import FarmerDashboard from './pages/Farmer/Dashboard'
 import OfficerDashboard from './pages/Officer/Dashboard'
-import FarmerEnquiry from './pages/Farmer/Enquiry'
-import FarmerHistory from './pages/Farmer/History'
+import FarmerEnquiryDetails from './pages/Farmer/EnquiryDetails'
+import FarmerEnquiryEvidence from './pages/Farmer/EnquiryEvidence'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -50,6 +50,8 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonRouterOutlet>
           {/* {userType == FARMER ? <Route exact path="/dashboard" component={FarmerDashboard}></Route> : null} */}
+          <Route exact path="/attach-evidence" component={FarmerEnquiryEvidence} ></Route>
+          <Route exact path="/enquiry-details" component={FarmerEnquiryDetails} ></Route>
           <Route exact path="/dashboard" component={userType == FARMER ? FarmerDashboard : OfficerDashboard}></Route>
           <Route exact path="/verified" ><Verified /></Route>
           <Route exact path="/verify" ><Verify /></Route>

@@ -46,7 +46,7 @@ export function userReducer(state = initialState, action: any) {
                 success: true,
                 loading: false,
                 token: action.token,
-                user_type: OFFICER
+                user_type: FARMER
             }
         case actionTypes.LOGIN_FAILURE:
             return {

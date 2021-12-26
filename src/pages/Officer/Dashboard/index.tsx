@@ -8,8 +8,17 @@ import respondImg from '../../../assets/img/respond-card.png'
 import historyImg from '../../../assets/img/history-card-gray.png'
 
 import styles from './Dashboard.module.css'
+import { useHistory } from 'react-router'
+import { useSelector } from 'react-redux'
+import { getAuthToken } from '../../../store/selectors'
 
-const Dashboard:React.FC = ({history}:any) => {
+const Dashboard:React.FC = () => {
+    const history = useHistory()
+    const token = useSelector(getAuthToken)
+    if (!token && token!="") {
+        history.push("/login")
+    }
+
     return (
         <DashboardLayout title="Dashboard" footer={true}>
             <PageCaption>Welcome Back Officer!</PageCaption>
