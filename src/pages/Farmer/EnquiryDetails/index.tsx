@@ -21,7 +21,7 @@ const EnquiryDetails:React.FC = () => {
     }
     */
     const [details, setdetails] = useState({
-        type: '',
+        disasterType: '',
         description: '',
         area: 0,
         office: ''
@@ -36,7 +36,7 @@ const EnquiryDetails:React.FC = () => {
     
     const content = addDetailsSuccess ? <Redirect to="/attach-evidence" /> : (
         <DashboardLayout title="Submit Claim" footer={true}>
-            <PageCaption>Enter all the details and Proceed!</PageCaption>
+            <PageCaption>Step 1 - Enter all the details</PageCaption>
             <IonGrid>
                 <IonRow>
                     <IonCol className={styles.registerControls}>

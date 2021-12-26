@@ -28,6 +28,24 @@ export interface verifyRequestData {
 export interface claimDetails {
     description: string;
     office: string;
-    type: string;
+    disasterType: string;
     area: number;
+}
+
+export interface UserPhoto {
+    filepath: string;
+    webviewPath?: string;
+}
+
+export interface LocationObject {
+    lat: any;
+    long: any;
+}
+
+export interface EvidenceObject {
+    files: File[];
+    location: LocationObject;
+    token: string;
+    details: claimDetails;
+
 }

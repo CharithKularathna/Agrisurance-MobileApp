@@ -5,7 +5,7 @@ type SubmissionState = {
     error: boolean
     description: string
     office: string
-    type: string
+    disasterType: string
     area: number | null
     addDetailsSuccess: boolean
 }
@@ -15,7 +15,7 @@ const initialState = {
     error: false,
     description: "",
     office: "",
-    type: "",
+    disasterType: "",
     area: 0,
     addDetailsSuccess: false
 } as SubmissionState
@@ -27,7 +27,7 @@ export function claimReducer(state = initialState, action: any) {
                 ...state,
                 description: action.description,
                 office: action.office,
-                type: action.disasterType,
+                disasterType: action.disasterType,
                 area: Number.parseInt(action.area),
                 addDetailsSuccess: true
             }
@@ -44,7 +44,7 @@ export function claimReducer(state = initialState, action: any) {
                 error: false,
                 description: "",
                 office: "",
-                type: "",
+                disasterType: "",
                 area: 0,
                 addDetailsSuccess: true
             }

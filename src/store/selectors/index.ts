@@ -14,7 +14,7 @@ export const getVerifyError = (state: RootState) => state.register.verifyError
 export const getVerifySuccess = (state: RootState) => state.register.verifySuccess
 
 export const getClaimDetails = (state: RootState) => ({
-    disasterType: state.claim.type,
+    disasterType: state.claim.disasterType,
     description: state.claim.description,
     area: state.claim.area,
     office: state.claim.office

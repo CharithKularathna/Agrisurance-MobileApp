@@ -27,7 +27,7 @@ const DetailsFormControls: React.FC<any> = ({ setdetails, details } : { setdetai
                 <IonCol size="12">
                     <IonItem className={styles.detailsInputContainer} lines="none">
                         <IonLabel position="stacked" color="customs">Disaster Type</IonLabel>
-                        <IonSelect value={details.type} placeholder="Select One" onIonChange={(e: any) => setdetails({...details, type: e.detail.value})}>
+                        <IonSelect value={details.disasterType} placeholder="Select One" onIonChange={(e: any) => setdetails({...details, disasterType: e.detail.value})}>
                             {disasterTypes.map((dType, index) => (
                                 <IonSelectOption value={dType} key={index}>{dType}</IonSelectOption>
                             ))}
