@@ -1,8 +1,6 @@
 import * as actionTypes from './types';
 import axiosInstance from '../../axios-agri';
 import { claimDetails, EvidenceObject } from '../../types';
-import { useSelector } from 'react-redux';
-import { getAuthToken, getClaimDetails } from '../selectors';
 
 export const setDetails = (data: claimDetails) => {
     return {
@@ -54,9 +52,9 @@ export const submitClaim = ( data: EvidenceObject ) => {
             }
         }).then(response => {
             console.log( response.data );
-            dispatch(submitClaimSuccess)
+            dispatch(submitClaimSuccess())
         }).catch(err => {
-            dispatch(submitClaimFail)
+            dispatch(submitClaimFail())
             console.log( err );
         })
     };

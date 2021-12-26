@@ -34,6 +34,7 @@ import './theme/variables.css';
 import { useSelector } from 'react-redux';
 import { getUserType } from './store/selectors';
 import { FARMER } from './constants';
+import FarmerEnquirySuccess from './pages/Farmer/EnquirySuccess';
 
 
 
@@ -50,6 +51,7 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonRouterOutlet>
           {/* {userType == FARMER ? <Route exact path="/dashboard" component={FarmerDashboard}></Route> : null} */}
+          <Route exact path="/claim-success" component={FarmerEnquirySuccess} ></Route>
           <Route exact path="/attach-evidence" component={FarmerEnquiryEvidence} ></Route>
           <Route exact path="/enquiry-details" component={FarmerEnquiryDetails} ></Route>
           <Route exact path="/dashboard" component={userType == FARMER ? FarmerDashboard : OfficerDashboard}></Route>

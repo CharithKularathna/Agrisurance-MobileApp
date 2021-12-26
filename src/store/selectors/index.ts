@@ -21,3 +21,4 @@ export const getClaimDetails = (state: RootState) => ({
 })
 
 export const getAddDetailsSuccess = (state: RootState) => state.claim.addDetailsSuccess
+export const getSubmitClaimSuccess = (state: RootState) => state.claim.success
