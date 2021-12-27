@@ -39,6 +39,7 @@ import { useSelector } from 'react-redux';
 import { getUserType } from './store/selectors';
 import { FARMER } from './constants';
 import RespondSuccess from './pages/Officer/RespondSuccess';
+import Responses from './pages/Officer/Responses';
 
 
 
@@ -57,6 +58,7 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonRouterOutlet>
           {/* {userType == FARMER ? <Route exact path="/dashboard" component={FarmerDashboard}></Route> : null} */}
+          <Route exact path="/responses" component={Responses} ></Route>
           <Route exact path="/history" component={FarmerEnquiryHistory} ></Route>
           <Route exact path="/response-success" component={RespondSuccess} ></Route>
           <Route exact path="/claim-by-id" component={Claim} ></Route>

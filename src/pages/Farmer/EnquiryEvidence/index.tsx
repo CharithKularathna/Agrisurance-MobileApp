@@ -10,6 +10,7 @@ import { submitClaim } from '../../../store/actions/claimActions'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAuthToken, getClaimDetails, getSubmitClaimSuccess } from '../../../store/selectors'
 import { Redirect } from 'react-router'
+import { Alert } from '../../../components/UI/Alert/Alert'
 
 
 const EnquiryEvidence: React.FC = () => {
@@ -56,9 +57,10 @@ const EnquiryEvidence: React.FC = () => {
                         
                     </IonRow>
                     
-                    <IonButton color="customs" size="default" onClick={() => takePhoto()}><IonIcon icon={camera}></IonIcon></IonButton>
+                    <IonButton style={{marginBottom:"5%"}} color="customs" size="default" onClick={() => takePhoto()}><IonIcon icon={camera}></IonIcon></IonButton>
+                    <Alert type="error" message='Note: You do not have to be connected to internet when attaching evidence.'></Alert>
                     {/* <IonButton disabled={!formFilled} color="customs" size="default" className={buttonStyles} onClick={() => dispatch(setdetails(details))}>Proceed</IonButton> */}
-                    <IonRow>
+                    <IonRow style={{marginTop:"10%"}}>
                         <IonCol>
                             <IonButton color="customs" size="default" onClick={() => dispatch(submitClaim({files:files, location:location, token: token, details: {
                                 area:claimDetails.area!,

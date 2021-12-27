@@ -12,6 +12,8 @@ import { getDateFromTimeStamp } from "../../../utility/utility"
 import { checkmarkDoneOutline, closeCircleOutline } from "ionicons/icons"
 import { approveClaim, rejectClaim } from "../../../store/actions/respondActions"
 import { Redirect } from "react-router"
+import p1 from '../../../assets/img/photo1.jpg'
+import p2 from '../../../assets/img/photo2.jpg'
 
 const Claim:React.FC = () => {
     const [enquiryData, setEnquiryData] = useState<any>({})
@@ -106,7 +108,12 @@ const Claim:React.FC = () => {
                 </IonRow>
                  <IonModal isOpen={showModal} cssClass='my-custom-class'>
                     <IonSlides pager={true} options={slideOpts}>
-                        Image 01
+                        <IonSlide>
+                            <IonImg style={{marginTop: "70%"}} src={p1}></IonImg>
+                        </IonSlide>
+                        <IonSlide>
+                            <IonImg src={p2}></IonImg>
+                        </IonSlide>
                         {/* {enquiryData.files.map((file:any,index:number)=>(
                             <IonSlide key={index}>
                                 <IonRow>
