@@ -6,8 +6,9 @@ import { personOutline, lockClosedOutline } from 'ionicons/icons';
 import styles from './RegisterControls.module.css'
 
 import { registerFormData } from '../../../types';
+import { getString, LOGIN_USERNAME, REGISTER_ADDRESS, REGISTER_ADDRESS_LINE1, REGISTER_ADDRESS_LINE2, REGISTER_CITY, REGISTER_CONFIRM_PASS, REGISTER_FNAME, REGISTER_GN_DIVISION, REGISTER_LNAME, REGISTER_NIC, REGISTER_PASSWORD } from '../../../localization';
 
-const RegisterControls: React.FC<any> = ({ setCredentials, credentials } : { setCredentials : ({}) => void , credentials: registerFormData}) => {
+const RegisterControls: React.FC<any> = ({ setCredentials, credentials, lang } : { setCredentials : ({}) => void , credentials: registerFormData, lang:string}) => {
     /*
     const [formData, setFormData] = useState<registerFormData>({
         fname: "", 
@@ -27,15 +28,15 @@ const RegisterControls: React.FC<any> = ({ setCredentials, credentials } : { set
             <IonRow className="ion-justify-content-center">
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">First Name</IonLabel>
-                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, fname: e.detail.value})} className={styles.field} type="text" placeholder="First Name" required={true}/>
+                        <IonLabel position="stacked" color="customs">{getString(REGISTER_FNAME,lang)}</IonLabel>
+                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, fname: e.detail.value})} className={styles.field} type="text" placeholder={getString(REGISTER_FNAME,lang)} required={true}/>
                     </IonItem>
                 </IonCol>
                 
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">Last Name</IonLabel>
-                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, lname: e.detail.value})} className={styles.field} type="text" placeholder="Last Name" required={true}/>
+                        <IonLabel position="stacked" color="customs">{getString(REGISTER_LNAME,lang)}</IonLabel>
+                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, lname: e.detail.value})} className={styles.field} type="text" placeholder={getString(REGISTER_LNAME,lang)} required={true}/>
                     </IonItem>
                 </IonCol>
                 
@@ -43,36 +44,36 @@ const RegisterControls: React.FC<any> = ({ setCredentials, credentials } : { set
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">NIC Number</IonLabel>
-                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, nic: e.detail.value})} className={styles.field} type="text" placeholder="NIC Number" required={true}/>
+                        <IonLabel position="stacked" color="customs">{getString(REGISTER_NIC,lang)}</IonLabel>
+                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, nic: e.detail.value})} className={styles.field} type="text" placeholder={getString(REGISTER_NIC,lang)} required={true}/>
                     </IonItem>
                 </IonCol>
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">Mobile Number</IonLabel>
+                        <IonLabel position="stacked" color="customs">{getString(LOGIN_USERNAME,lang)}</IonLabel>
                         <IonInput onIonChange={(e: any) => setCredentials({...credentials, mobile: e.detail.value})} className={styles.field} type="tel" placeholder="07XXXXXXXX" required={true}/>
                     </IonItem>
                 </IonCol>
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
-                    <IonItemDivider className={styles.divider}>Address</IonItemDivider>
+                    <IonItemDivider className={styles.divider}>{getString(REGISTER_ADDRESS,lang)}</IonItemDivider>
                 </IonCol>
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">Address Line 1</IonLabel>
-                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, addressLine1: e.detail.value})} className={styles.field} type="text" placeholder="Address Line 1" required={true}/>
+                        <IonLabel position="stacked" color="customs">{getString(REGISTER_ADDRESS_LINE1,lang)}</IonLabel>
+                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, addressLine1: e.detail.value})} className={styles.field} type="text" placeholder={getString(REGISTER_ADDRESS_LINE1,lang)} required={true}/>
                     </IonItem>
                 </IonCol>
                 
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">Address Line 2</IonLabel>
-                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, addressLine2: e.detail.value})} className={styles.field} type="text" placeholder="Address Line 2" required={true}/>
+                        <IonLabel position="stacked" color="customs">{getString(REGISTER_ADDRESS_LINE2,lang)}</IonLabel>
+                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, addressLine2: e.detail.value})} className={styles.field} type="text" placeholder={getString(REGISTER_ADDRESS_LINE2,lang)} required={true}/>
                     </IonItem>
                 </IonCol>
                 
@@ -81,37 +82,37 @@ const RegisterControls: React.FC<any> = ({ setCredentials, credentials } : { set
             <IonRow className="ion-justify-content-center">
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">GN Division</IonLabel>
-                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, gn: e.detail.value})} className={styles.field} type="text" placeholder="GN Division" required={true}/>
+                        <IonLabel position="stacked" color="customs">{getString(REGISTER_GN_DIVISION,lang)}</IonLabel>
+                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, gn: e.detail.value})} className={styles.field} type="text" placeholder={getString(REGISTER_GN_DIVISION,lang)} required={true}/>
                     </IonItem>
                 </IonCol>
                 
                 <IonCol size="6">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">City</IonLabel>
-                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, city: e.detail.value})} className={styles.field} type="text" placeholder="City" required={true}/>
+                        <IonLabel position="stacked" color="customs">{getString(REGISTER_CITY,lang)}</IonLabel>
+                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, city: e.detail.value})} className={styles.field} type="text" placeholder={getString(REGISTER_CITY,lang)} required={true}/>
                     </IonItem>
                 </IonCol>
                 
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
-                    <IonItemDivider className={styles.divider}>Password</IonItemDivider>
+                    <IonItemDivider className={styles.divider}>{getString(REGISTER_PASSWORD,lang)}</IonItemDivider>
                 </IonCol>
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">Password</IonLabel>
-                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, password: e.detail.value})} className={styles.field} type="password" placeholder="Password" required={true}/>
+                        <IonLabel position="stacked" color="customs">{getString(REGISTER_PASSWORD,lang)}</IonLabel>
+                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, password: e.detail.value})} className={styles.field} type="password" placeholder={getString(REGISTER_PASSWORD,lang)} required={true}/>
                     </IonItem>
                 </IonCol>
             </IonRow>
             <IonRow className="ion-justify-content-center">
                 <IonCol size="12">
                     <IonItem className={styles.registerInputContainer} lines="none">
-                        <IonLabel position="stacked" color="customs">Confirm Password</IonLabel>
-                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, confirmPassword: e.detail.value})} className={styles.field} type="password" placeholder="Confirm Password" required={true}/>
+                        <IonLabel position="stacked" color="customs">{getString(REGISTER_CONFIRM_PASS,lang)}</IonLabel>
+                        <IonInput onIonChange={(e: any) => setCredentials({...credentials, confirmPassword: e.detail.value})} className={styles.field} type="password" placeholder={getString(REGISTER_CONFIRM_PASS,lang)} required={true}/>
                     </IonItem>
                 </IonCol>
             </IonRow>

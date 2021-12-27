@@ -6,11 +6,12 @@ import styles from './Register.module.css';
 
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAuthToken, getRegisterError, getLoading, getRegisterSuccess } from '../../store/selectors';
+import { getAuthToken, getRegisterError, getLoading, getRegisterSuccess, getLang } from '../../store/selectors';
 import { Alert } from '../../components/UI/Alert/Alert';
 import { register } from '../../store/actions/registerActions';
 import { isFormFilled } from '../../utility/formValidation';
 import { Redirect } from 'react-router';
+import { getString, REGISTER_Title, TXT_LOGIN_BTN, TXT_REGISTER_BTN } from '../../localization';
 
 
 const Register: React.FC = () => {
@@ -18,6 +19,7 @@ const Register: React.FC = () => {
   const buttonStyles = "" + styles.registerBtn
   let formFilled = false;
   let passwordMismatch = false;
+  const lang = useSelector(getLang)
   
   const dispatch = useDispatch()
   //const dispatchResetUI = useDispatch()
@@ -50,7 +52,7 @@ const Register: React.FC = () => {
 
   const content = regSuccess ? <Redirect to="/verify" /> : (
     <IonPage>
-    <Toolbar>Register</Toolbar>
+    <Toolbar>{getString(TXT_REGISTER_BTN, lang)}</Toolbar>
     <IonContent className={pageStyles} fullscreen>
       {/* <IonHeader collapse="condense">
         <IonToolbar>
@@ -58,12 +60,12 @@ const Register: React.FC = () => {
         </IonToolbar>
       </IonHeader> */}
 
-      <PageCaption>Fill in the following and Register!</PageCaption>
+      <PageCaption>{getString(REGISTER_Title, lang)}</PageCaption>
 
       <IonGrid className={styles.bgContent}>
           <IonRow>
               <IonCol className={styles.registerControls}>
-                  <RegisterControls credentials={credentials} setCredentials={setCredentials} />
+                  <RegisterControls lang={lang} credentials={credentials} setCredentials={setCredentials} />
               </IonCol>
           </IonRow>
           {error &&
@@ -80,7 +82,7 @@ const Register: React.FC = () => {
                 </IonCol>
             </IonRow>
           }
-          <IonButton disabled={!formFilled} color="customs" size="default" className={buttonStyles} onClick={() => dispatch(register(credentials))}>Register</IonButton>
+          <IonButton disabled={!formFilled} color="customs" size="default" className={buttonStyles} onClick={() => dispatch(register(credentials))}>{getString(TXT_REGISTER_BTN,lang)}</IonButton>
       </IonGrid>
     </IonContent>
   </IonPage>

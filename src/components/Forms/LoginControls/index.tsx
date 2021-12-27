@@ -4,8 +4,9 @@ import React, { useEffect, useState } from 'react';
 import { personOutline, lockClosedOutline } from 'ionicons/icons';
 
 import styles from './LoginControls.module.css'
+import { getString, LOGIN_PASSWORD, LOGIN_USERNAME } from '../../../localization';
 
-const LoginControls: React.FC<any> = ( { setCredentials } : { setCredentials : ({}) => void }) => {
+const LoginControls: React.FC<any> = ( { setCredentials, lang } : { setCredentials : ({}) => void, lang:string }) => {
 
     const [username, setU] = useState<string>("")
     const [password, setP] = useState<string>("")
@@ -21,7 +22,7 @@ const LoginControls: React.FC<any> = ( { setCredentials } : { setCredentials : (
                 <IonCol size="11">
                     <IonItem className={styles.loginInputContainer} lines="none">
                         <IonIcon className="" icon={personOutline} slot="start" />
-                        <IonInput onIonChange={(e: any) => setU(e.detail.value)} className={styles.field} color="customs" type="text" placeholder="Username" required/>
+                        <IonInput onIonChange={(e: any) => setU(e.detail.value)} className={styles.field} color="customs" type="text" placeholder={getString(LOGIN_USERNAME,lang)} required/>
                     </IonItem>
                 </IonCol>
                 
@@ -30,7 +31,7 @@ const LoginControls: React.FC<any> = ( { setCredentials } : { setCredentials : (
                 <IonCol size="11">
                     <IonItem className={styles.loginInputContainer} lines="none">
                         <IonIcon className="" icon={lockClosedOutline} slot="start" />
-                        <IonInput onIonChange={(e: any) => setP(e.detail.value)} className={styles.field} color="customs" type="password" placeholder="Password" required/>
+                        <IonInput onIonChange={(e: any) => setP(e.detail.value)} className={styles.field} color="customs" type="password" placeholder={getString(LOGIN_PASSWORD,lang)} required/>
                     </IonItem>
                 </IonCol>
             </IonRow>

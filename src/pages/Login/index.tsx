@@ -5,10 +5,11 @@ import styles from './Login.module.css';
 
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAuthToken, getLoginError, getLoading } from '../../store/selectors';
+import { getAuthToken, getLoginError, getLoading, getLang } from '../../store/selectors';
 import { Alert } from '../../components/UI/Alert/Alert';
 import { login } from '../../store/actions/userActions';
 import { Redirect } from 'react-router';
+import { getString, TXT_LOGIN_BTN } from '../../localization';
 
 const Login: React.FC<any> = () => {
   const pageStyles = "ion-text-center " + styles.page
@@ -20,10 +21,11 @@ const Login: React.FC<any> = () => {
   //const [password, setpassword] = useState("")
   const token = useSelector(getAuthToken)
   let error = useSelector(getLoginError)
+  const lang = useSelector(getLang)
 
   const content = token ? <Redirect to="/dashboard" /> : (
     <IonPage>
-      <Toolbar>Login</Toolbar>
+      <Toolbar>{getString(TXT_LOGIN_BTN,lang)}</Toolbar>
       <IonContent className={pageStyles} fullscreen>
         {/* <IonHeader collapse="condense">
           <IonToolbar>
@@ -48,7 +50,7 @@ const Login: React.FC<any> = () => {
         <IonGrid className={styles.bgContent}>
             <IonRow>
                 <IonCol className={styles.loginControls}>
-                    <LoginControls setCredentials={setCredentials} />
+                    <LoginControls lang={lang} setCredentials={setCredentials} />
                 </IonCol>
         
             </IonRow>
@@ -59,7 +61,7 @@ const Login: React.FC<any> = () => {
                   </IonCol>
               </IonRow>
             }
-            <IonButton size="default" color="customs" className={buttonStyles} onClick={() => dispatch(login(credentials))}>LogIn</IonButton>
+            <IonButton size="default" color="customs" className={buttonStyles} onClick={() => dispatch(login(credentials))}>{getString(TXT_LOGIN_BTN,lang)}</IonButton>
         </IonGrid>
         
         <IonGrid>

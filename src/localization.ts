@@ -20,6 +20,24 @@ export const TXT_HOME_TITLE : string[] = ["Welcome to Agrisurance Mobile App", "
 export const TXT_LOGIN_BTN : string[] = ["Login", "ලොග් වන්න" ]
 export const TXT_REGISTER_BTN : string[] = ["Register","ලියාපදිංචි වීමට"]
 
+
 // LABELS
+
+export const REGISTER_Title : string[] = ["Fill in the following and Register","පහත දෑ පුරවා ලියාපදිංචි වන්න"]
+export const REGISTER_FNAME : string[] = ["First Name","මුල් නම"]
+export const REGISTER_LNAME : string[] = ["Last Name","වාසගම"]
+export const REGISTER_NIC : string[] = ["NIC","ජා.හැ. අංකය"]
+export const REGISTER_ADDRESS : string[] = ["Address","ලිපිනය"]
+export const REGISTER_ADDRESS_LINE1 : string[] = ["Address Line 1","ලිපිනය - පළමු පේලිය"]
+export const REGISTER_ADDRESS_LINE2 : string[] = ["Address Line 2","ලිපිනය - දෙවන පේලිය"]
+export const REGISTER_GN_DIVISION : string[] = ["GN Division","ග්‍රාම නිලධාරි කොට්ඨාසය"]
+export const REGISTER_CITY : string[] = ["City","නගරය"]
+export const REGISTER_PASSWORD : string[] = ["Password","මුරපදය"]
+export const REGISTER_CONFIRM_PASS : string[] = ["Confirm Password","මුරපදය සනාථ කරන්න"]
+
+export const LOGIN_USERNAME : string[] = ["Mobile No.","දුරකථන අංකය"]
+export const LOGIN_PASSWORD : string[] = ["Password","මුරපදය"]
+
+
 
 
