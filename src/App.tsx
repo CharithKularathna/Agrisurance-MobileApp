@@ -14,6 +14,7 @@ import FarmerEnquiryEvidence from './pages/Farmer/EnquiryEvidence'
 import FarmerEnquirySuccess from './pages/Farmer/EnquirySuccess';
 import Respond from './pages/Officer/Respond'
 import Claim from './pages/Officer/Claim';
+import FarmerEnquiryHistory from './pages/Farmer/History';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -56,6 +57,7 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonRouterOutlet>
           {/* {userType == FARMER ? <Route exact path="/dashboard" component={FarmerDashboard}></Route> : null} */}
+          <Route exact path="/history" component={FarmerEnquiryHistory} ></Route>
           <Route exact path="/response-success" component={RespondSuccess} ></Route>
           <Route exact path="/claim-by-id" component={Claim} ></Route>
           <Route exact path="/respond" component={Respond} ></Route>
