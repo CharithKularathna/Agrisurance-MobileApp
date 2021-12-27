@@ -13,6 +13,7 @@ import FarmerEnquiryDetails from './pages/Farmer/EnquiryDetails'
 import FarmerEnquiryEvidence from './pages/Farmer/EnquiryEvidence'
 import FarmerEnquirySuccess from './pages/Farmer/EnquirySuccess';
 import Respond from './pages/Officer/Respond'
+import Claim from './pages/Officer/Claim';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,7 +37,9 @@ import './theme/variables.css';
 import { useSelector } from 'react-redux';
 import { getUserType } from './store/selectors';
 import { FARMER } from './constants';
-;
+import RespondSuccess from './pages/Officer/RespondSuccess';
+
+
 
 
 
@@ -53,6 +56,8 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonRouterOutlet>
           {/* {userType == FARMER ? <Route exact path="/dashboard" component={FarmerDashboard}></Route> : null} */}
+          <Route exact path="/response-success" component={RespondSuccess} ></Route>
+          <Route exact path="/claim-by-id" component={Claim} ></Route>
           <Route exact path="/respond" component={Respond} ></Route>
           <Route exact path="/claim-success" component={FarmerEnquirySuccess} ></Route>
           <Route exact path="/attach-evidence" component={FarmerEnquiryEvidence} ></Route>

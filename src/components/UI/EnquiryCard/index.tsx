@@ -2,7 +2,7 @@ import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, 
 import styles from 'EnquiryCard.module.css'
 import React from 'react'
 
-const EnquiryCard:React.FC<any> = ({id, status, date}) => {
+const EnquiryCard:React.FC<any> = ({id, status, date, clickHandler, cardType}) => {
     let color;
     if (status == "Pending"){
         color = "customs"
@@ -14,7 +14,7 @@ const EnquiryCard:React.FC<any> = ({id, status, date}) => {
         color = "danger"
     }
     return (
-        <IonCard>
+        <IonCard onClick={(e) => clickHandler(id)}>
             <IonCardHeader>
                 <IonCardSubtitle>Enquiry ID - {id}</IonCardSubtitle>
                 <IonCardTitle>Status - <IonText color={color}>{status}</IonText></IonCardTitle>

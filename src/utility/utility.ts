@@ -5,7 +5,7 @@ export const buildAddressStr = (fd: registerFormData) => {
     return (temp.join(", "))
 }
 
-export const getDateFromTimeStamp = (ts: any) => {
+export const getDateFromTimeStamp = (ts: string) => {
     return ts.slice(0,10)
 }
     

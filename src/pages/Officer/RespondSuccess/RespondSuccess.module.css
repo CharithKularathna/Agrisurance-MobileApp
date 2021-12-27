@@ -1,0 +1,13 @@
+.pageStyles {
+    --background: linear-gradient(90deg, var(--app-primary-color-g1) 0%, var(--app-primary-color-g2) 35%, var(--app-primary-color-g2) 100%);
+    text-align: center;
+}
+
+.alert {
+    margin-top: 4%;
+}
+
+.button {
+    color: var(--app-yellow-shade);
+    margin-top: 5%;
+}
