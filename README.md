@@ -12,7 +12,12 @@ The farmers can submit their enquiries with evidence to get compensation for the
 
 A video demo of the project is available at [Youtube](https://www.youtube.com/watch?v=JraqSQ11R6o) 
 
-## Technologies Used
+### Special Features
+
+ - Bilingual Support (Sinhala and English)
+ - Cross-platform Support.
+
+## Technology Stack
 
 <p align="left"> 
     <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/typescript.png"/> </a> 
@@ -37,11 +42,6 @@ npm install
 
 ionic serve
 ```
-
-### Special Features
-
- - Bilingual Support (Sinhala and English)
- - Cross-platform Support.
 
 
 ## Sample Images and Screenshots 
