@@ -9,7 +9,7 @@ import { getAuthToken, getLoginError, getLoading, getLang } from '../../store/se
 import { Alert } from '../../components/UI/Alert/Alert';
 import { login } from '../../store/actions/userActions';
 import { Redirect } from 'react-router';
-import { getString, TXT_LOGIN_BTN } from '../../localization';
+import { getString, LOGIN_ERROR, TXT_LOGIN_BTN } from '../../localization';
 
 const Login: React.FC<any> = () => {
   const pageStyles = "ion-text-center " + styles.page
@@ -57,7 +57,7 @@ const Login: React.FC<any> = () => {
             {error &&
               <IonRow>
                   <IonCol>
-                    <Alert type="error" message="Failed to login. Please check the Credentials."/>
+                    <Alert type="error" message={getString(LOGIN_ERROR,lang)}/>
                   </IonCol>
               </IonRow>
             }

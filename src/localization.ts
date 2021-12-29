@@ -37,7 +37,8 @@ export const REGISTER_CONFIRM_PASS : string[] = ["Confirm Password","මුර�
 
 export const LOGIN_USERNAME : string[] = ["Mobile No.","දුරකථන අංකය"]
 export const LOGIN_PASSWORD : string[] = ["Password","මුරපදය"]
-
+export const LOGIN_ERROR : string[] = ["Failed to login. Please check the Credentials.", "ලොග් වීම අසාර්ථක විය. කරුණාකර විස්තර නැවත පරීක්ෂා කරන්න. "]
+export const REGISTER_ERROR : string[] = ["Failed to register. Please check the details and re-submit.", "ලියාපදිංචි වීම අසාර්ථක විය. කරුණාකර විස්තර පරීක්ෂා කර නැවත ඉදිරිපත් කරන්න."]
 
 
 

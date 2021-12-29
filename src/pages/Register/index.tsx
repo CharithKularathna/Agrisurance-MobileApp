@@ -11,7 +11,7 @@ import { Alert } from '../../components/UI/Alert/Alert';
 import { register } from '../../store/actions/registerActions';
 import { isFormFilled } from '../../utility/formValidation';
 import { Redirect } from 'react-router';
-import { getString, REGISTER_Title, TXT_LOGIN_BTN, TXT_REGISTER_BTN } from '../../localization';
+import { getString, REGISTER_ERROR, REGISTER_Title, TXT_LOGIN_BTN, TXT_REGISTER_BTN } from '../../localization';
 
 
 const Register: React.FC = () => {
@@ -71,7 +71,7 @@ const Register: React.FC = () => {
           {error &&
             <IonRow>
                 <IonCol>
-                  <Alert type="error" message="Failed to register. Please check the details and re-submit."/>
+                  <Alert type="error" message={getString(REGISTER_ERROR,lang)}/>
                 </IonCol>
             </IonRow>
           }
