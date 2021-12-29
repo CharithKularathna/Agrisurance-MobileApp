@@ -46,7 +46,7 @@ ionic serve
 
 ## Sample Images and Screenshots 
 <div width="160px" height="350">
-<img>![Select Lang - 2](https://user-images.githubusercontent.com/47145853/147616455-e8867ee3-3b40-44a2-bd96-3403bd175345.jpg)</img>
+<img src="https://user-images.githubusercontent.com/47145853/147616455-e8867ee3-3b40-44a2-bd96-3403bd175345.jpg"></img>
 </div>
 <div width="160px" height="350">
 ![Home](https://user-images.githubusercontent.com/47145853/147616462-383a9a19-ac31-4379-9d23-52f43ad13bfb.jpg)
